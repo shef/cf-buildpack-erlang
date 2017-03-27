@@ -16,7 +16,7 @@ if [ -f ${build}/.preferred_otp_version ]; then
 fi
 ver=${OTP_VERSION:=${DEFAULT_OTP_VERSION}}
 tarball=${ver}.tgz
-OTP_TARBALL_URL="https://s3.amazonaws.com/heroku-buildpack-erlang/${tarball}"
+OTP_TARBALL_URL="https://s3.amazonaws.com/heroku-buildpack-erlang/runtimes/${tarball}"
 ERLROOT=${build}/otp
 PROFILE=${build}/.profile.d
 
