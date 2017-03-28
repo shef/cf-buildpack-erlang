@@ -4,9 +4,15 @@ This is a Cloud Foundry buildpack for Erlang apps. It uses [Rebar](https://githu
 
 It was adapted from a [Heroku Buildpack](https://github.com/archaelus/heroku-buildpack-erlang) with just a couple things changed to be CF compatible.
 
+It was adapted one more time :) to use Heroku cedar-14 images because cedar stack discontinued(?) by Heroku. 
+
 ### Select an Erlang version
 
 The Erlang/OTP release version that will be used to build and run your application is now sourced from a dotfile called `.preferred_otp_version`. It needs to be the branch or tag name from the http://github.com/erlang/otp repository, and further, needs to be one of the versions that precompiled binaries are available for.
+
+The latest available Heroku Erlang build is "OTP-19.1.1". If you want to use it do:
+
+    $ echo "OTP-19.1.1" > .preferred_otp_version
 
 Currently supported OTP versions:
 
